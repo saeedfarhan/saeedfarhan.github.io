@@ -683,6 +683,212 @@
     100%{ left: 100%; }
   }
 
+  /* GITHUB */
+  #github { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .github-inner { display: flex; flex-direction: column; gap: 2rem; }
+
+  .github-meta {
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+
+  .github-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--card); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .github-avatar svg { width: 26px; height: 26px; stroke: var(--accent); }
+
+  .github-handle {
+    font-family: var(--font-mono); font-size: 0.85rem; color: var(--text);
+  }
+
+  .github-handle a { color: var(--accent); text-decoration: none; }
+  .github-handle a:hover { text-decoration: underline; }
+
+  .github-sub {
+    font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted);
+    margin-top: 0.2rem; letter-spacing: 0.05em;
+  }
+
+  .heatmap-wrap {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.5rem 1.75rem; overflow-x: auto;
+  }
+
+  .heatmap-label {
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;
+  }
+
+  .heatmap { display: flex; gap: 3px; align-items: flex-end; }
+
+  .heatmap-col { display: flex; flex-direction: column; gap: 3px; }
+
+  .heatmap-cell {
+    width: 11px; height: 11px; border-radius: 2px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .heatmap-cell.l1 { background: rgba(99,179,237,0.18); }
+  .heatmap-cell.l2 { background: rgba(99,179,237,0.38); }
+  .heatmap-cell.l3 { background: rgba(99,179,237,0.62); }
+  .heatmap-cell.l4 { background: rgba(99,179,237,0.88); }
+
+  .heatmap-months {
+    display: flex; gap: 3px; margin-bottom: 0.4rem;
+    font-family: var(--font-mono); font-size: 0.62rem; color: var(--muted);
+  }
+
+  .heatmap-month { width: 11px; white-space: nowrap; }
+
+  .heatmap-legend {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-top: 0.75rem; justify-content: flex-end;
+    font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted);
+  }
+
+  .legend-cell {
+    width: 10px; height: 10px; border-radius: 2px;
+  }
+
+  /* EXPERIENCE */
+  #experience { background: var(--bg); }
+
+  .exp-timeline { position: relative; padding-left: 2rem; }
+
+  .exp-timeline::before {
+    content: ''; position: absolute; left: 0; top: 8px; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+
+  .exp-item { position: relative; margin-bottom: 3rem; }
+  .exp-item:last-child { margin-bottom: 0; }
+
+  .exp-dot {
+    position: absolute; left: -2.35rem; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px rgba(99,179,237,0.4);
+  }
+
+  .exp-period {
+    font-family: var(--font-mono); font-size: 0.68rem;
+    color: var(--accent); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.4rem;
+  }
+
+  .exp-role {
+    font-family: var(--font-display); font-size: 1.3rem;
+    font-weight: 600; color: var(--text); margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
+  }
+
+  .exp-company {
+    font-family: var(--font-mono); font-size: 0.78rem;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+
+  .exp-bullets {
+    list-style: none; display: flex; flex-direction: column; gap: 0.5rem;
+  }
+
+  .exp-bullets li {
+    font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted);
+    line-height: 1.7; padding-left: 1.1rem; position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '—'; position: absolute; left: 0; color: rgba(99,179,237,0.4);
+  }
+
+  /* CERTIFICATIONS */
+  #certifications { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .certs-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+  }
+
+  .cert-card {
+    background: var(--card); padding: 1.5rem 1.75rem;
+    transition: background 0.2s; display: flex; flex-direction: column; gap: 0.75rem;
+  }
+
+  .cert-card:hover { background: var(--bg3); }
+
+  .cert-issuer {
+    font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent2);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+
+  .cert-issuer::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent2); flex-shrink: 0;
+  }
+
+  .cert-name {
+    font-family: var(--font-display); font-size: 1.05rem;
+    font-weight: 600; color: var(--text); line-height: 1.3;
+  }
+
+  .cert-date {
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted);
+    letter-spacing: 0.05em; margin-top: auto;
+  }
+
+  /* TESTIMONIALS */
+  #testimonials { background: var(--bg); }
+
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .testi-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.75rem;
+    display: flex; flex-direction: column; gap: 1.25rem;
+    transition: border-color 0.2s;
+  }
+
+  .testi-card:hover { border-color: rgba(99,179,237,0.2); }
+
+  .testi-quote {
+    font-family: var(--font-display); font-size: 1.05rem; font-style: italic;
+    color: var(--text); line-height: 1.75; font-weight: 300;
+    position: relative; padding-top: 0.5rem;
+  }
+
+  .testi-quote::before {
+    content: '\201C'; position: absolute; top: -0.75rem; left: -0.25rem;
+    font-size: 3rem; color: rgba(99,179,237,0.2); font-family: var(--font-display);
+    line-height: 1;
+  }
+
+  .testi-author { display: flex; align-items: center; gap: 0.85rem; margin-top: auto; }
+
+  .testi-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--bg2); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--accent); flex-shrink: 0; font-weight: 500;
+  }
+
+  .testi-name {
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--text);
+  }
+
+  .testi-role {
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted);
+    margin-top: 0.15rem;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1.25rem 2rem; }
@@ -708,7 +914,9 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -843,9 +1051,33 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label" data-num="03">Experience</div>
+  <h2 class="section-title">Where I've Worked</h2>
+  <div class="exp-timeline">
+
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-period">2021 — 2026</div>
+      <div class="exp-role">Software Engineer</div>
+      <div class="exp-company">Digital Solutions Consultancy · Srinagar, India</div>
+      <ul class="exp-bullets">
+        <li>Owned backend services for a cloud-hosted synthetic test data platform using Python/FastAPI and PHP/Symfony.</li>
+        <li>Automated large-scale data pipelines with Apache Airflow, orchestrating scheduled jobs daily and reducing manual effort significantly.</li>
+        <li>Designed and scaled an AI-driven recruitment platform.</li>
+        <li>Built RESTful APIs managing thousands of candidate profiles and job listings with fast average response times.</li>
+        <li>Implemented security-focused data handling including anonymization and encryption for enterprise compliance.</li>
+        <li>Delivered production-ready React interfaces achieving high mobile compatibility.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label" data-num="03">Projects</div>
+  <div class="section-label" data-num="04">Projects</div>
   <h2 class="section-title">Featured Work</h2>
   <div class="projects-grid">
 
@@ -921,30 +1153,7 @@
       <div class="project-links">
         <a href="https://paxilia.com" class="project-link" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          paxilia
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-num">04 / project</div>
-      <div class="project-title">Campus Attendance System</div>
-      <p class="project-desc">
-        A web-based attendance tracking platform for college environments. Teachers
-        can access class rosters, mark attendance in real-time, and generate reports.
-        Features role-based access controls, audit trails, and scales to large
-        student populations.
-      </p>
-      <div class="project-tech">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Web App</span>
-        <span class="tech-tag">Role-based Access</span>
-        <span class="tech-tag">MySQL</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="project-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
+          paxilia.com
         </a>
       </div>
     </div>
@@ -952,9 +1161,88 @@
   </div>
 </section>
 
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-label" data-num="05">Certifications</div>
+  <h2 class="section-title">Badges & Credentials</h2>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-issuer">IAC Software Solutions</div>
+      <div class="cert-name">Training in C Programming</div>
+      <div class="cert-date">July 2017 · IAC-663</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-issuer">IAC Software Solutions</div>
+      <div class="cert-name">Training in Java</div>
+      <div class="cert-date">Feb 2018 · IAC-703</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-issuer">Rooman Technologies</div>
+      <div class="cert-name">Junior Software Developer</div>
+      <div class="cert-date">November 2018 · SSC/Q0508</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-issuer">Frontend Developer React</div>
+      <div class="cert-name">HackerRank</div>
+      <div class="cert-date">January 2026 · 03399d511485</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-issuer">Basics of Python</div>
+      <div class="cert-name">HackerRank</div>
+      <div class="cert-date">January 2026 · 509ce4b5656b</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label" data-num="06">Recommendations</div>
+  <h2 class="section-title">What People Say</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <p class="testi-quote">
+        I’ve had the pleasure of working with Farhan for over five years, and I can confidently say he is one of the most talented software developers I’ve ever worked with. He has all the qualities any manager would value: integrity, drive, strong skills, and true ownership. Farhan is highly skilled in Symfony 5/6, ReactJS, FastAPI, Airflow, Python and MySQL. He can analyze use cases and problems, turning complex challenges into reliable, production-ready solutions. He was a key contributor to CloudTDMS, our synthetic data platform, and TAFFin.tech, our AI recruitment platform. Both projects needed high-level thinking and precise execution, and Farhan delivered always on time and at high quality. Farhan is more than just a developer. He’s a great collaborator, a problem solver, and a natural technical leader. I strongly recommend him to any team looking for talent, drive, ownership, and integrity.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">KB</div>
+        <div>
+          <div class="testi-name">Khalid BOUJDAA</div>
+          <div class="testi-role">Enterprise Architect</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-quote">
+        I have known Farhan for five years and have been consistently impressed by his capabilities as a software developer and designer. He possesses excellent technical knowledge along with a strong ability to approach challenges innovatively. Farhan is an outstanding team contributor and a valuable asset to the organisation. I would recommend him highly for any future roles.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">IT</div>
+        <div>
+          <div class="testi-name">Imran TAK</div>
+          <div class="testi-role">Senior Solutions Architect</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-quote">
+        I had the opportunity to collaborate with Farhan on several projects. He demonstrated strong technical expertise, professionalism, and a clear commitment to company objectives. His ability to deliver high-quality results within deadlines makes him a valuable and dependable professional.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">MH</div>
+        <div>
+          <div class="testi-name">Mohamed HAIJOUBI</div>
+          <div class="testi-role">CEO PAXILIA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label" data-num="04">Contact</div>
+  <div class="section-label" data-num="07">Contact</div>
   <h2 class="section-title">Let's Talk</h2>
   <div class="contact-inner">
 
@@ -977,7 +1265,6 @@
           </span>
           <span>linkedin.com/in/syed-farhan</span>
         </a>
-
       </div>
     </div>
 
@@ -1005,6 +1292,8 @@
 
   </div>
 </section>
+
+
 
 <!-- FOOTER -->
 <footer>
